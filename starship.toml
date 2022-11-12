@@ -1,0 +1,80 @@
+format = """
+[](#8be9fd)\
+$username\
+[](bg:#50fa7b fg:#8be9fd)\
+$directory\
+[](bg:#ffb86c fg:#50fa7b)\
+$c\
+[](bg:#ff79c6 fg:#ffb86c)\
+$python\
+[](bg:#bd93f9 fg:#ff79c6)\
+$java\
+[](bg:#282a36 fg:#bd93f9)\
+$fill\
+[](bg:#282a36 fg:#ff79c6)\
+$cmd_duration\
+[](bg:#282a36 fg:#ff79c6)\
+[ ](#282a36)\
+[](bg:#282a36 fg:#ffb86c)\
+$sudo\
+[](bg:#282a36 fg:#ffb86c)\
+[ ](#282a36)\
+[](bg:#282a36 fg:#50fa7b)\
+$git_branch\
+[](bg:#282a36 fg:#50fa7b)
+$character\
+"""
+
+# Disable the blank line at the start of the prompt
+# add_newline = false
+
+# You can also replace your username with a neat symbol like  to save some space
+[username]
+show_always = true
+style_user = "bold bg:#8be9fd fg:#282a36"
+style_root = "bold bg:#8be9fd fg:#282a36"
+format = '[$user ]($style)'
+
+[directory]
+style = "bg:#50fa7b fg:#282a36"
+format = "[ $path ]($style)"
+truncation_length = 1
+
+[c]
+symbol = " "
+style = "bg:#ffb86c fg:#282a36"
+format = '[ $symbol ($version) ]($style)'
+
+[python]
+symbol = " "
+style = "bg:#ff79c6 fg:#282a36"
+format = '[${symbol}${pyenv_prefix}(${version} )(\($virtualenv\) )]($style)'
+
+[java]
+symbol = " "
+style = "bg:#bd93f9"
+format = '[ $symbol ($version) ]($style)'
+
+[cmd_duration]
+min_time = 0
+style = "bg:#ff79c6 fg:#282a36"
+format = "[ $duration]($style)"
+
+[fill]
+symbol = " "
+
+[sudo]
+disabled = false
+symbol = " "
+format = "[$symbol]($style)"
+style = "bg:#ffb86c fg:#282a36"
+
+[git_branch]
+symbol = ""
+style = "bg:#50fa7b fg:#282a36"
+format = '[ $symbol $branch ]($style)'
+
+[character]
+format = "$symbol"
+success_symbol = "[❯ ](bold #50fa7b)"
+error_symbol = "[❯ ](bold #ff5555)"
