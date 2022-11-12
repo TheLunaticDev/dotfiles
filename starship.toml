@@ -78,3 +78,4 @@ format = '[ $symbol $branch ]($style)'
 format = "$symbol"
 success_symbol = "[❯ ](bold #50fa7b)"
 error_symbol = "[❯ ](bold #ff5555)"
+
