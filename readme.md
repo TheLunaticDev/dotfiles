@@ -9,9 +9,15 @@ create a script that would automate the whole process.
 ## How to setup the machine
 ### 1. Clone this repo
 ### 2. Install the **required packages**
-#### A. Starship
+#### A. Alacritty
+A cross-platform, GPU-accelerated terminal emulator
+Arch: sudo pacman -S alacritty
+#### B. Starship
 The cross-shell prompt for astronauts
 Arch: sudo pacman -S starship
 ### 3. Create the symlinks
-#### A. Starship
+#### A. Alacritty
+mkdir .config/alacritty/
+ln -s ~/.dotfiles/alacritty/alacritty.yml ~/.config/alacritty/alacritty.yml
+#### B. Starship
 ln -s ~/.dotfiles/starship.toml ~/.config/starship.toml
