@@ -1,3 +1,6 @@
+continuation_prompt = "[ ](#f1fa8c)"
+add_newline = true
+
 format = """
 [](#8be9fd)\
 $username\
@@ -16,7 +19,7 @@ $cmd_duration\
 [](bg:#282a36 fg:#ff79c6)\
 [ ](#282a36)\
 [](bg:#282a36 fg:#ffb86c)\
-$sudo\
+$git_status\
 [](bg:#282a36 fg:#ffb86c)\
 [ ](#282a36)\
 [](bg:#282a36 fg:#50fa7b)\
@@ -25,10 +28,6 @@ $git_branch\
 $character\
 """
 
-# Disable the blank line at the start of the prompt
-# add_newline = false
-
-# You can also replace your username with a neat symbol like  to save some space
 [username]
 show_always = true
 style_user = "bold bg:#8be9fd fg:#282a36"
@@ -63,11 +62,22 @@ format = "[ $duration]($style)"
 [fill]
 symbol = " "
 
-[sudo]
-disabled = false
-symbol = " "
-format = "[$symbol]($style)"
-style = "bg:#ffb86c fg:#282a36"
+[git_status]
+format = '([$all_status$ahead_behind]($style))'
+style = "bg:#ffb86c fg:#282a36 bold"
+conflicted = " "
+ahead = " "
+behind = " "
+diverged = "者 "
+up_to_date = " "
+untracked = " "
+stashed = " "
+modified = " "
+staged = " "
+renamed = "凜 "
+deleted = "﫧 "
+
+
 
 [git_branch]
 symbol = ""
