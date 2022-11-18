@@ -127,5 +127,5 @@ key_bindings:
   - { key: NumpadAdd,      mods: Control,                         action: IncreaseFontSize }
   - { key: Minus,          mods: Control,                         action: DecreaseFontSize }
   - { key: NumpadSubtract, mods: Control,                         action: DecreaseFontSize }
-  - { Key: F,		   mods: Control,			  action: ToggleFullScreen }
+  - { Key: F,		   mods: Control|Shift,			  action: ToggleFullScreen }
   - { Key: Space, 	   mods: Control,			  action: ToggleViMode	   }
